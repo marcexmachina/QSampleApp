@@ -14,6 +14,10 @@
 		982D0D4F1E93471300994DBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 982D0D4D1E93471300994DBF /* LaunchScreen.storyboard */; };
 		982D0D5A1E93471300994DBF /* QSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982D0D591E93471300994DBF /* QSampleAppTests.swift */; };
 		982D0D651E93471300994DBF /* QSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982D0D641E93471300994DBF /* QSampleAppUITests.swift */; };
+		98A6D5071E9376440017D3BD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A6D5051E9376440017D3BD /* Alamofire.framework */; };
+		98A6D5081E9376440017D3BD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A6D5061E9376440017D3BD /* SwiftyJSON.framework */; };
+		98ABF1EF1E9472960054164F /* HeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ABF1EE1E9472960054164F /* HeadlinesViewController.swift */; };
+		98ABF1F31E9476560054164F /* CategoryPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ABF1F21E9476560054164F /* CategoryPickerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		982D0D601E93471300994DBF /* QSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		982D0D641E93471300994DBF /* QSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QSampleAppUITests.swift; sourceTree = "<group>"; };
 		982D0D661E93471300994DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98A6D5051E9376440017D3BD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		98A6D5061E9376440017D3BD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		98ABF1EE1E9472960054164F /* HeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlinesViewController.swift; sourceTree = "<group>"; };
+		98ABF1F21E9476560054164F /* CategoryPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPickerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98A6D5071E9376440017D3BD /* Alamofire.framework in Frameworks */,
+				98A6D5081E9376440017D3BD /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +91,7 @@
 				982D0D581E93471300994DBF /* QSampleAppTests */,
 				982D0D631E93471300994DBF /* QSampleAppUITests */,
 				982D0D421E93471300994DBF /* Products */,
+				98A6D5041E9376440017D3BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +108,11 @@
 		982D0D431E93471300994DBF /* QSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				98ABF1F11E9474840054164F /* Controllers */,
+				98ABF1F01E9474260054164F /* Models */,
+				98ABF1ED1E946A000054164F /* Networking */,
 				982D0D441E93471300994DBF /* AppDelegate.swift */,
-				982D0D461E93471300994DBF /* ViewController.swift */,
+				98ABF1EC1E9469F20054164F /* ViewModels */,
 				982D0D481E93471300994DBF /* Main.storyboard */,
 				982D0D4B1E93471300994DBF /* Assets.xcassets */,
 				982D0D4D1E93471300994DBF /* LaunchScreen.storyboard */,
@@ -125,6 +139,47 @@
 			path = QSampleAppUITests;
 			sourceTree = "<group>";
 		};
+		98A6D5041E9376440017D3BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98A6D5051E9376440017D3BD /* Alamofire.framework */,
+				98A6D5061E9376440017D3BD /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		98ABF1EC1E9469F20054164F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		98ABF1ED1E946A000054164F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		98ABF1F01E9474260054164F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		98ABF1F11E9474840054164F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				982D0D461E93471300994DBF /* ViewController.swift */,
+				98ABF1EE1E9472960054164F /* HeadlinesViewController.swift */,
+				98ABF1F21E9476560054164F /* CategoryPickerController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +190,7 @@
 				982D0D3D1E93471300994DBF /* Sources */,
 				982D0D3E1E93471300994DBF /* Frameworks */,
 				982D0D3F1E93471300994DBF /* Resources */,
+				98A6D5091E9376650017D3BD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -257,12 +313,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		98A6D5091E9376650017D3BD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		982D0D3D1E93471300994DBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				982D0D471E93471300994DBF /* ViewController.swift in Sources */,
+				98ABF1F31E9476560054164F /* CategoryPickerController.swift in Sources */,
+				98ABF1EF1E9472960054164F /* HeadlinesViewController.swift in Sources */,
 				982D0D451E93471300994DBF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,7 +492,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WEXR3T62Q9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = QSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.marcexmachina.QSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -429,7 +510,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WEXR3T62Q9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = QSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.marcexmachina.QSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,6 +600,7 @@
 				982D0D6B1E93471300994DBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		982D0D6C1E93471300994DBF /* Build configuration list for PBXNativeTarget "QSampleAppTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +609,7 @@
 				982D0D6E1E93471300994DBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		982D0D6F1E93471300994DBF /* Build configuration list for PBXNativeTarget "QSampleAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +618,7 @@
 				982D0D711E93471300994DBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
