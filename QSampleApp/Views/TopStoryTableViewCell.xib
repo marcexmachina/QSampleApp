@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="153" id="KGk-i7-Jjw" customClass="TopStoryTableViewCell" customModule="QSampleApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="329" height="153"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="329" height="152.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Db1-5F-DV2">
+                        <rect key="frame" x="8" y="8" width="75" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="529-XW-QqM"/>
+                            <constraint firstAttribute="height" constant="75" id="JA3-zc-ieJ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your title goes here" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chC-DS-zTq">
+                        <rect key="frame" x="91" y="8" width="148.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfM-x0-vzK">
+                        <rect key="frame" x="204" y="123.5" width="117" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="chC-DS-zTq" firstAttribute="leading" secondItem="Db1-5F-DV2" secondAttribute="trailing" constant="8" id="I3r-hb-IlQ"/>
+                    <constraint firstAttribute="topMargin" secondItem="Db1-5F-DV2" secondAttribute="top" id="Qal-bs-b37"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="QfM-x0-vzK" secondAttribute="trailing" id="ZSE-fB-oHw"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="Db1-5F-DV2" secondAttribute="leading" id="l4D-Jj-xxH"/>
+                    <constraint firstItem="chC-DS-zTq" firstAttribute="top" secondItem="Db1-5F-DV2" secondAttribute="top" id="maJ-pl-EUg"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="QfM-x0-vzK" secondAttribute="bottom" id="n8P-N7-mm4"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="chC-DS-zTq" secondAttribute="trailing" constant="8" id="tM2-bG-oMv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headlineTitleLabel" destination="chC-DS-zTq" id="FJf-MM-Fau"/>
+                <outlet property="publishedDateLabel" destination="QfM-x0-vzK" id="G8h-cb-K4T"/>
+                <outlet property="thumbnailImageView" destination="Db1-5F-DV2" id="vAA-U7-Ynk"/>
+            </connections>
+            <point key="canvasLocation" x="39.5" y="67.5"/>
+        </tableViewCell>
+    </objects>
+</document>
